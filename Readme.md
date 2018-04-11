@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Владислав Есин](https://up.htmlacademy.ru/adaptive/14/user/186855).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Безуглый](https://htmlacademy.ru/profile/shalfey41).
 
 ---
 
