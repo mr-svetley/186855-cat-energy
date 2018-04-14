@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Кэт энерджи - функциональное питание для котов</title>
   </head>
-  <body>
+  <body class="theme">
     <header class="header">
       <a href="index.html" class="logo-link">
-        <img src="#" alt="Cat Energy - функциональное питание для котов" class="logo-link__img">
-        <img src="#" alt="Cat Energy" class="logo-link__text">
+        <img src="#" alt="Cat Energy - лого" class="logo-link__img">
+        <img src="#" alt="Cat Energy - лого" class="logo-link__text">
       </a>
       <nav class="navigation">
         <button class="navigation__btn"></button>
@@ -27,7 +27,7 @@
     </header>
     <main class="main">
       <h1 class="main__title theme__title--lage">Подбор программы</h1>
-      <form action="https://echo.htmlacademy.ru/" class="form">
+      <form action="https://echo.htmlacademy.ru/" method="POST" class="form">
         <p class="form__text">Заполните анкету и мы подберем
           программу питания для вашего кота</p>
         <section class="form__group">
@@ -63,13 +63,13 @@
         </section>
         <section class="form__group">
             <h2 class="form__group-title theme__title--medium">Контактные данные (владельца кота)</h2>
-            <label class="form__item">
+            <label class="form__item form__item--email">
               <span class="form__label">E-mail:*</span>
-              <input type="email" class="form__field form__field--email" name="email" placeholder="kuklachev@gmail.com" required>
+              <input type="email" class="form__field" name="email" placeholder="kuklachev@gmail.com" required>
             </label>
-            <label class="form__item">
+            <label class="form__item form__item--tel">
               <span class="form__label">Телефон:*</span>
-              <input type="tel" class="form__field form__field--tel" name="tel" placeholder="8 (960) 900-60-90" required>
+              <input type="tel" class="form__field" name="tel" placeholder="8 (960) 900-60-90" required>
             </label>
         </section>
         <section class="form__group">
@@ -112,7 +112,7 @@
       </section>
       <section class="footer__main">
         <a href="#" class="footer__logo-link">
-          <img src="#" alt="Cat Energy" class="footer__logo-img">
+          <img src="#" alt="Cat Energy - лого" class="footer__logo-img">
         </a>
         <ul class="footer__social-list social">
           <li class="social__item">
@@ -127,7 +127,7 @@
         </ul>
         <a href="#" class="academy-link">
           HTML Academy
-          <img src="#" alt="HTML Academy" class="academy-link__img">
+          <img src="https://htmlacademy.ru/intensive/adaptive" alt="HTML Academy" class="academy-link__img">
         </a>
       </section>
     </footer>
