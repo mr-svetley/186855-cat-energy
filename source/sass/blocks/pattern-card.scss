@@ -1,0 +1,88 @@
+.pattern-card {
+  background-color: $simple-color;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &--slim {
+    &::after {
+      background-image: url("../img/icon-cat-slim.svg");
+      background-size: 35px 49px;
+    }
+  }
+
+  &--pro {
+    &::after {
+      background-image: url("../img/icon-cat-pro.svg");
+      background-size: 67px 28px;
+    }
+  }
+}
+
+.pattern-card__title {
+  font: 24px/37px $accent-font;
+  text-transform: uppercase;
+}
+
+.pattern-card__list {
+  @include list-reset;
+}
+
+// .pattern-card__item {
+
+// }
+
+.pattern-card__description {
+  border-bottom: 1px solid $simple-color-dark;
+}
+
+.pattern-card__link {
+  font: 16px/16px $accent-font;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: baseline;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: -5px center;
+    background-size: 24px 11px;
+    height: 16px;
+    width: 33px;
+  }
+
+  &:hover {
+    &::after {
+      background-position: 0 center;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,47 @@
+// .slider {
+
+// }
+
+.slider__slides {
+  position: relative;
+  min-height: 240px;
+}
+
+.slider__slide {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &--before {
+    clip: rect(auto, 160px, auto, auto);
+  }
+
+  &--after {
+    clip: rect(auto, auto, auto, 160px);
+  }
+}
+
+// .slider__controls {
+
+// }
+
+.slider__btn {
+  @include btn-reset;
+  font: 16px/20px $accent-color;
+  text-transform: uppercase;
+}
+
+.slider__range {
+  border: 1px solid $simple-color-dark;
+  border-radius: 6px;
+  background-color: #ffffff;
+  padding: 4px 6px;
+}
+
+.slider__range-fill {
+  height: 6px;
+  border-radius: 3px;
+  width: 50%;
+  background-color: $accent-color;
+}

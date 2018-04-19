@@ -1,0 +1,14 @@
+.promo-top {
+  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.promo-top__title {
+  font: 36px/36px $accent-font;
+}
+
+.promo-top__slogan {
+  font: 14px/14px $accent-font;
+  text-transform: uppercase;
+}

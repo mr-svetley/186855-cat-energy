@@ -1,4 +1,15 @@
-@mixin centerer() {
-  margin-left: auto;
-  margin-right: auto;
+@mixin list-reset() {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@mixin btn-reset() {
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
 }
