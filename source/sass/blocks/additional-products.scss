@@ -1,0 +1,27 @@
+// .additional-products {
+
+// }
+
+.additional-products__list {
+  @include list-reset;
+}
+
+.additional-products__item {
+  line-height: 14px;
+}
+
+.additional-products__name {
+  font: 16px/16px $accent-font;
+}
+
+// .additional-products__value {
+
+// }
+
+// .additional-products__price {
+
+// }
+
+// .additional-products__btn {
+
+// }

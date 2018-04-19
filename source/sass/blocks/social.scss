@@ -1,0 +1,38 @@
+.social {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__item {
+  display: flex;
+}
+
+.social__link {
+  display: block;
+  margin: auto;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  overflow: hidden;
+  text-indent: 999px;
+
+  &--vk {
+    width: 22px;
+    height: 12px;
+    background-image: url("../img/icon-vk-mobile.svg");
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+    background-image: url("../img/icon-fb-mobile.svg");
+  }
+
+  &--in {
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/icon-insta-mobile.svg");
+  }
+}

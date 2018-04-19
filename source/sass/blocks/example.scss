@@ -1,0 +1,35 @@
+.example {
+  background-color: $simple-color;
+}
+
+// .example__info {
+
+// }
+
+// .example__text {
+
+// }
+
+.example__stat-list {
+  @include list-reset;
+}
+
+.example__stat-item {
+  border: 1px solid $simple-color-dark;
+  border-radius: 3px;
+}
+
+.example__stat-name {
+  width: 70%;
+}
+
+.example__stat-value {
+  width: 70%;
+  font: 24px/24px $accent-font;
+  text-transform: uppercase;
+}
+
+.example__total {
+  font: 14px/20px $accent-font;
+  text-transform: uppercase;
+}

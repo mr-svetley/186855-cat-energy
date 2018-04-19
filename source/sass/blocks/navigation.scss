@@ -1,0 +1,72 @@
+.navigation {
+  font-family: $accent-font;
+}
+
+.navigation__list {
+  @include list-reset;
+}
+
+// .navigation__item {
+
+// }
+
+.navigation__link {
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.navigation__btn {
+  @include btn-reset;
+  position: relative;
+  width: 65px;
+  height: 65px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 23px;
+    left: 20px;
+    background-color: #000000;
+    width: 24px;
+    height: 2px;
+    box-shadow: 0 6px 0 0 #000000;
+    transition: 1s;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    background-color: #000000;
+    width: 24px;
+    height: 2px;
+    transition: 1s;
+  }
+
+  &--close {
+    &::before {
+      top: 31px;
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      top: 31px;
+      transform: rotate(-45deg);
+    }
+  }
+}
