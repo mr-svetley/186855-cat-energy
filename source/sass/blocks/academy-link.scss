@@ -1,5 +1,8 @@
 .academy-link {
-  display: block;
+  display: flex;
+  min-height: 78px;
+  align-items: center;
+
   font-size: 16px;
   text-decoration: none;
   color: inherit;
@@ -8,5 +11,13 @@
 
 .academy-link__img {
   height: 34px;
+  width: 27px;
+  margin-left: auto;
   vertical-align: middle;
+}
+
+@media (min-width: $tablet-width) {
+  .academy-link__img {
+    margin-left: 20px;
+  }
 }

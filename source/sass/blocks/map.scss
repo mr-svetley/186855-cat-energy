@@ -1,3 +1,32 @@
 // .map {
 
 // }
+
+@media (min-width: $desktop-width) {
+  .map {
+    position: relative;
+  }
+}
+
+.map__frame {
+  display: block;
+  height: 364px;
+  width: 100%;
+  border: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .map__frame {
+    height: 396px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map__frame {
+    height: 399px;
+  }
+}
+
+// .map__contacts {
+
+// }
