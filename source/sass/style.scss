@@ -1,7 +1,9 @@
+@import "normalize";
 @import "vars";
 @import "mixins";
 @import "fonts";
-@import "global";
+@import "base";
+@import "blocks/theme";
 @import "blocks/btn";
 @import "blocks/header";
 @import "blocks/logo-link";
