@@ -1,21 +1,22 @@
-.example {
-}
+// .example {
 
-@media (min-width: $tablet-width) {
-  .example {
-  }
-}
+// }
+
+// @media (min-width: $tablet-width) {
+//   .example {
+//   }
+// }
 
 @media (min-width: $desktop-width) {
   .example {
     background-color: $simple-color;
-    background-image: linear-gradient(to right, $simple-color, $simple-color 50%,  $simple-color-dark 50%, $simple-color-dark);
+    background-image: linear-gradient(to right, $simple-color, $simple-color 50%, $simple-color-dark 50%, $simple-color-dark);
   }
 }
 
-.example__title-wrapper {
+// .example__title-wrapper {
 
-}
+// }
 
 @media (min-width: $desktop-width) {
   .example__title-wrapper {
@@ -91,9 +92,9 @@
   margin: 0;
 }
 
-.example__stat-wrapper {
+// .example__stat-wrapper {
 
-}
+// }
 
 @media (min-width: $tablet-width) {
   .example__stat-wrapper {
@@ -106,11 +107,11 @@
   display: flex;
 }
 
-@media (min-width: $tablet-width) {
-  .example__stat-list {
+// @media (min-width: $tablet-width) {
+//   .example__stat-list {
 
-  }
-}
+//   }
+// }
 
 .example__stat-item {
   border: 1px solid $simple-color-dark;

@@ -1,11 +1,12 @@
-.form {
+// .form {
 
-}
+// }
 
-@media (min-width: $tablet-width) {
-  .form {
-  }
-}
+// @media (min-width: $tablet-width) {
+//   .form {
+
+//   }
+// }
 
 @media (min-width: $desktop-width) {
   .form {
@@ -39,9 +40,9 @@
   }
 }
 
-.form__base-wrapper {
+// .form__base-wrapper {
 
-}
+// }
 
 @media (min-width: $desktop-width) {
   .form__base-wrapper {
@@ -51,9 +52,9 @@
   }
 }
 
-.form__group {
+// .form__group {
 
-}
+// }
 
 .form__item-group {
   display: flex;
@@ -113,6 +114,7 @@
       padding-left: 27px;
       padding-top: 24px;
     }
+
     &--base {
       margin: 0 40px;
       width: 570px;

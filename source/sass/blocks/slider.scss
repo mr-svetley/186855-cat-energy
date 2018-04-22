@@ -8,7 +8,7 @@
 
 @media (min-width: $tablet-width) {
   .slider {
-    background-image: linear-gradient(to right, $simple-color, $simple-color 50%,  $simple-color-dark 50%, $simple-color-dark);
+    background-image: linear-gradient(to right, $simple-color, $simple-color 50%, $simple-color-dark 50%, $simple-color-dark);
   }
 }
 
@@ -16,7 +16,7 @@
   .slider {
     width: 50%;
     flex-shrink: 0;
-    background-image: linear-gradient(to right, $simple-color, $simple-color 50%,  $simple-color-dark 50%, $simple-color-dark);
+    background-image: linear-gradient(to right, $simple-color, $simple-color 50%, $simple-color-dark 50%, $simple-color-dark);
   }
 }
 
