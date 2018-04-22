@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи - функциональное питание для котов</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="theme">
@@ -29,45 +30,48 @@
       </div>
     </header>
     <main class="main">
-      <h1 class="main__title theme__title theme__title--lage">Подбор программы</h1>
+      <h1 class="main__title theme__title theme__title--large">Подбор программы</h1>
       <form action="https://echo.htmlacademy.ru/" method="POST" class="form">
         <p class="form__text">Заполните анкету и мы подберем
           программу питания для вашего кота</p>
         <section class="form__group">
           <h2 class="form__group-title visually-hidden">Основная информация</h2>
-          <div class="form__item-group">
-            <label class="form__item">
-              <span class="form__label">Имя:*</span>
-              <input type="text" class="form__field" name="name" placeholder="Барсик" required>
-            </label>
-            <label class="form__item">
-              <span class="form__label">Вес (кг):*</span>
-              <input type="text" class="form__field" name="weight" placeholder="7" required>
-            </label>
-            <label class="form__item">
-              <span class="form__label">Возраст (лет):</span>
-              <input type="text" class="form__field" name="age" placeholder="7">
-            </label>
-          </div>
-          <div class="form__item-group form__item-group--accent">
-            <label class="form__item form__item--radio">
-              <input type="radio" class="visually-hidden" name="type" value="slim">
-              <span class="form__label">Похудение</span>
-            </label>
-            <label class="form__item form__item--radio">
-              <input type="radio" class="visually-hidden" name="type" value="pro">
-              <span class="form__label">Набор массы</span>
-            </label>
-            <label class="form__item form__item--radio">
-              <input type="radio" class="visually-hidden" name="type" value="advice">
-              <span class="form__label">Не знаю (нужен ваш совет)</span>
-            </label>
+          <div class="form__base-wrapper">
+            <div class="form__item-group form__item-group--base">
+              <label class="form__item">
+                <span class="form__label">Имя:*</span>
+                <input type="text" class="form__field" name="name" placeholder="Барсик" required>
+              </label>
+              <label class="form__item">
+                <span class="form__label">Вес (кг):*</span>
+                <input type="text" class="form__field" name="weight" placeholder="7" required>
+              </label>
+              <label class="form__item">
+                <span class="form__label">Возраст (лет):</span>
+                <input type="text" class="form__field" name="age" placeholder="7">
+              </label>
+            </div>
+            <div class="form__item-group form__item-group--radio">
+              <label class="form__item form__item--radio">
+                <input type="radio" class="visually-hidden" name="type" value="slim">
+                <span class="form__label">Похудение</span>
+              </label>
+              <label class="form__item form__item--radio">
+                <input type="radio" class="visually-hidden" name="type" value="pro">
+                <span class="form__label">Набор массы</span>
+              </label>
+              <label class="form__item form__item--radio">
+                <input type="radio" class="visually-hidden" name="type" value="advice">
+                <span class="form__label">Не знаю (нужен ваш совет)</span>
+              </label>
+            </div>
           </div>
         </section>
         <section class="form__group">
-            <h2 class="form__group-title theme__title  theme__title--medium">
-              <span class="theme__title-wrapper">Контактные данные (владельца кота)</span>
-            </h2>
+          <h2 class="form__group-title theme__title  theme__title--medium">
+            <span class="theme__title-wrapper">Контактные данные (владельца кота)</span>
+          </h2>
+          <div class="form__item-group form__item-group--contacts">
             <label class="form__item form__item--email">
               <span class="form__label">E-mail:*</span>
               <input type="email" class="form__field" name="email" placeholder="kuklachev@gmail.com" required>
@@ -76,18 +80,19 @@
               <span class="form__label">Телефон:*</span>
               <input type="tel" class="form__field" name="tel" placeholder="8 (960) 900-60-90" required>
             </label>
+          </div>
         </section>
         <section class="form__group">
             <h2 class="form__group-title theme__title theme__title--medium">
                 <span class="theme__title-wrapper">Комментарии</span>
             </h2>
-            <textarea class="form__field form__field--textarea" name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота" required></textarea>
+            <textarea class="form__field form__field--textarea" name="comment" cols="30" rows="3" placeholder="Расскажите обо всех повадках кота" required></textarea>
         </section>
         <section class="form__group">
             <h2 class="form__group-title theme__title theme__title--medium">
                 <span class="theme__title-wrapper">Дополнительно</span>
             </h2>
-            <div class="form__item-group">
+            <div class="form__item-group form__item-group--checkbox">
               <label class="form__item form__item--checkbox">
                 <input type="checkbox" class="visually-hidden" name="more[]" value="sugar">
                 <span class="form__label">Сахарозаменитель</span>
@@ -107,15 +112,15 @@
             </div>
         </section>
         <p class="form__submit-group">
-          <button class="btn btn-green">Отправить заявку</button>
-          <span class="form__small-text">* - Обязательные поля</span>
+          <button class="form__btn btn btn-green">Отправить заявку</button>
+          <span class="form__small-text">* &mdash; Обязательные поля</span>
         </p>
       </form>
     </main>
     <footer class="footer">
       <section class="map">
         <div class="map__contacts contacts">
-          <b class="contacts__caption">Приглашаем к сотрудничеству диллеров!</b>
+          <b class="contacts__caption">Приглашаем <br>к сотрудничеству дилеров!</b>
           <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<hr>Санкт-Петербург</address>
         </div>
         <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.586148179253!2d30.321409600227856!3d59.93900915479934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1524243651736" width="800" height="600" frameborder="0" allowfullscreen></iframe>

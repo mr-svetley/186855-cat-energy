@@ -58,13 +58,26 @@
     font-size: 18px;
     line-height: 25px;
     font-weight: 400;
+    border-bottom-color: transparent;
     border-bottom-width: 2px;
+
+    &--active {
+      border-bottom-color: $accent-color;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .navigation__link {
     font-size: 20px;
+
+    &--light {
+      color: #ffffff;
+    }
+
+    &--light.navigation__link--active {
+      border-bottom-color: #ffffff;
+    }
   }
 }
 

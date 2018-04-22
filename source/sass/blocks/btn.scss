@@ -4,12 +4,11 @@
   background-color: $accent-color;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: normal;
   font-family: $accent-font;
-  line-height: 20px;
-  font-size: 20px;
+  line-height: 40px;
   display: inline-block;
-  padding: 16px 25px;
+  font-size: 16px;
 
   &:hover {
     background-color: $accent-color-dark;
@@ -32,3 +31,26 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .btn {
+    line-height: 52px;
+    font-size: 20px;
+    padding: 0 27px;
+    font-size: 20px;
+  }
+}
+
+// .btn {
+//   @include btn-reset;
+//   color: #ffffff;
+//   background-color: $accent-color;
+//   text-align: center;
+//   text-transform: uppercase;
+//   font-weight: 400;
+//   font-family: $accent-font;
+//   line-height: 20px;
+//   font-size: 20px;
+//   display: inline-block;
+//   padding: 16px 25px;
+// }

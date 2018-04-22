@@ -1,14 +1,130 @@
 .promo-top {
-  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: repeat-x;
+  background-size: auto auto;
+  background-position: center top;
   color: #ffffff;
+  min-height: 485px;
 }
+
+@media (min-width: $tablet-width) {
+  .promo-top {
+    background-image: none;
+    min-height: 840px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-top {
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    min-height: 696px;
+    background-size: 50% auto;
+  }
+}
+
+.promo-top__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  padding-top: 28px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-top__wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-top__wrapper {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 170px;
+    position: relative;
+  }
+}
+
 
 .promo-top__title {
   font: 36px/36px $accent-font;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 11px;
+  max-width: 340px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-top__title {
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: #000000;
+    margin-bottom: 21px;
+    order: 1;
+    margin-left: 88px;
+    max-width: 500px;
+  }
 }
 
 .promo-top__slogan {
   font: 14px/14px $accent-font;
   text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-top__slogan {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: left;
+    margin-bottom: 48px;
+    order: 2;
+    margin-left: 88px;
+  }
+}
+
+.promo-top__img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 3px;
+  max-width: 345px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-top__img {
+    order: 4;
+    margin-top: -80px;
+    margin-bottom: 0;
+    align-self: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-top__img {
+    position: absolute;
+    top: 242px;
+    left: 720px;
+  }
+}
+
+.promo-top__btn {
+  align-self: stretch;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-top__btn {
+    align-self: auto;
+    order: 3;
+    z-index: 1;
+    position: relative;
+    margin-left: 88px;
+  }
 }
