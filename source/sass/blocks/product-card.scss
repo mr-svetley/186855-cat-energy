@@ -1,6 +1,10 @@
 .product-card {
   font-size: 14px;
   line-height: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 
   &--more {
     &::before {
@@ -13,6 +17,21 @@
       background-position: center center;
       opacity: 0.2;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-card {
+    background-color: $simple-color;
+    margin: 30px;
+    flex: 1 0 40%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-card {
+    margin: 40px;
+    flex: 1 0 245px;
   }
 }
 

@@ -1,0 +1,34 @@
+.promo-card {
+  min-height: 289px;
+  background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center 50px, center center;
+  background-size: 55px 60px, cover;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 150px;
+  margin: 40px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-card {
+    min-height: 200px;
+    background-position: 90px center, 0 center;
+    padding-left: 55%;
+    padding-top: 75px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-card {
+    background-position: conter 50px, center center;
+    width: 245px;
+    min-height: 289px;
+    padding: 0;
+    padding-top: 200px;
+    text-align: center;
+    margin: 0;
+    margin-left: auto;
+  }
+}

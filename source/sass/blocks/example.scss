@@ -1,18 +1,117 @@
-.example {
-  background-color: $simple-color;
+// .example {
+
+// }
+
+// @media (min-width: $tablet-width) {
+//   .example {
+//   }
+// }
+
+@media (min-width: $desktop-width) {
+  .example {
+    background-color: $simple-color;
+    background-image: linear-gradient(to right, $simple-color, $simple-color 50%, $simple-color-dark 50%, $simple-color-dark);
+  }
 }
 
-// .example__info {
+// .example__title-wrapper {
 
 // }
 
-// .example__text {
+@media (min-width: $desktop-width) {
+  .example__title-wrapper {
+    background-color: #ffffff;
+  }
+}
+
+.example__title {
+  background-color: $simple-color;
+  padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__title {
+    background-color: transparent;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__title {
+    padding: 0 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+.example__wrapper {
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .example__wrapper {
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__wrapper {
+    max-width: 1300px;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+.example__info {
+  background-color: $simple-color;
+  padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__info {
+    background-color: transparent;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .example__info {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__info {
+    flex-grow: 1;
+    padding: 0;
+  }
+}
+
+.example__text {
+  margin: 0;
+}
+
+// .example__stat-wrapper {
 
 // }
+
+@media (min-width: $tablet-width) {
+  .example__stat-wrapper {
+    display: flex;
+  }
+}
 
 .example__stat-list {
   @include list-reset;
+  display: flex;
 }
+
+// @media (min-width: $tablet-width) {
+//   .example__stat-list {
+
+//   }
+// }
 
 .example__stat-item {
   border: 1px solid $simple-color-dark;
@@ -32,4 +131,11 @@
 .example__total {
   font: 14px/20px $accent-font;
   text-transform: uppercase;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .example__total {
+    margin-left: auto;
+  }
 }

@@ -1,14 +1,36 @@
-// .footer {
-
-// }
-
-.footer__main {
+.footer {
   background-color: $simple-color;
 }
 
-// .footer__logo-link {
+.footer__main {
+  padding: 0 20px;
+  padding-top: 5px;
+}
 
-// }
+@media (min-width: $tablet-width) {
+  .footer__main {
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 150px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__main {
+    padding-left: 40px;
+    padding-right: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+.footer__logo-link {
+  min-height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
 .footer__logo-img {
   width: 128px;

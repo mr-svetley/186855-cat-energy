@@ -1,27 +1,139 @@
-// .additional-products {
+.additional-products {
+  padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-products {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products {
+    padding: 0 40px;
+  }
+}
+
+// .additional-products__title {
 
 // }
 
+@media (min-width: $tablet-width) {
+  .additional-products__title {
+    padding: 0 38px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products__title {
+    max-width: 1300px;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+}
+
+// .additional-products__wrapper {
+
+// }
+
+@media (min-width: $desktop-width) {
+  .additional-products__wrapper {
+    max-width: 1220px;
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
 .additional-products__list {
   @include list-reset;
+  border-top: 1px solid $simple-color;
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products__list {
+    flex-shrink: 0;
+    flex-grow: 1;
+    margin-right: 80px;
+  }
 }
 
 .additional-products__item {
   line-height: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  border-bottom: 1px solid $simple-color;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-products__item {
+    padding: 0 38px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products__item {
+    padding: 0;
+  }
 }
 
 .additional-products__name {
   font: 16px/16px $accent-font;
+  width: 100%;
 }
 
-// .additional-products__value {
+@media (min-width: $tablet-width) {
+  .additional-products__name {
+    width: auto;
+  }
+}
 
-// }
+@media (min-width: $desktop-width) {
+  .additional-products__name {
+    width: 325px;
+  }
+}
 
-// .additional-products__price {
+.additional-products__value {
+  width: 50%;
+}
 
-// }
+@media (min-width: $tablet-width) {
+  .additional-products__value {
+    width: auto;
+    margin-left: auto;
+  }
+}
 
-// .additional-products__btn {
+@media (min-width: $desktop-width) {
+  .additional-products__value {
+    width: 245px;
+  }
+}
 
-// }
+.additional-products__price {
+  width: 50%;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-products__price {
+    width: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products__price {
+    width: 80px;
+  }
+}
+
+.additional-products__btn {
+  width: 100%;
+}
+
+@media (min-width: $desktop-width) {
+  .additional-products__btn {
+    width: auto;
+    flex-grow: 1;
+  }
+}

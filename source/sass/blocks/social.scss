@@ -1,18 +1,42 @@
 .social {
   @include list-reset;
+  border: 1px solid $simple-color-dark;
+  border-left: none;
+  border-right: none;
+  min-height: 64px;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    padding-left: 30px;
+  }
 }
 
 .social__item {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 22px;
+  height: 19px;
+  margin: 0 17px;
+}
+
+@media (min-width: $tablet-width) {
+  .social__item {
+    width: 30px;
+    height: 28px;
+    margin: 0 10px;
+  }
 }
 
 .social__link {
   display: block;
   margin: auto;
-  height: 22px;
+
   background-repeat: no-repeat;
   background-position: center center;
   overflow: hidden;
@@ -34,5 +58,24 @@
     width: 16px;
     height: 16px;
     background-image: url("../img/icon-insta-mobile.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__link {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--in {
+      width: 23px;
+      height: 23px;
+    }
   }
 }

@@ -4,8 +4,31 @@
 
 .pattern-cards__list {
   @include list-reset;
+  padding: 0 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .pattern-cards__list {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pattern-cards__list {
+    padding: 0;
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
 }
 
 // .pattern-cards__item {
 
 // }
+
+@media (min-width: $desktop-width) {
+  .pattern-cards__item {
+    margin: 0 40px;
+    flex: 1 0 500px;
+  }
+}
