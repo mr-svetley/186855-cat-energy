@@ -16,6 +16,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .navigation__list {
+    padding-top: 8px;
+  }
+}
+
 // .navigation__item {
 //   flex-grow: 1;
 // }
