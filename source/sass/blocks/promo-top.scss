@@ -4,23 +4,24 @@
   background-size: auto auto;
   background-position: center top;
   color: #ffffff;
-  min-height: 485px;
+  padding-top: 25px;
+  padding-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
   .promo-top {
     background-image: none;
-    min-height: 840px;
+    padding-bottom: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .promo-top {
-    background-image: url("../img/index-background-mobile@1x.jpg");
+    // background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
-    background-position: right top;
-    min-height: 696px;
-    background-size: 50% auto;
+    padding-top: 49px;
+    margin-bottom: 35px;
+    min-height: 572px;
   }
 }
 
@@ -29,14 +30,14 @@
   flex-direction: column;
   align-items: center;
   padding: 0 20px;
-  padding-top: 28px;
+  padding-top: 0px;
 }
 
 @media (min-width: $tablet-width) {
   .promo-top__wrapper {
-    padding-left: 30px;
+    padding-left: 117px;//
     padding-right: 30px;
-    padding-top: 30px;
+    padding-top: 4px;//
     align-items: flex-start;
   }
 }
@@ -46,8 +47,9 @@
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 170px;
+    padding-top: 4px;
     position: relative;
+    padding-left: 120px;
   }
 }
 
@@ -66,9 +68,8 @@
     line-height: 60px;
     text-align: left;
     color: #000000;
-    margin-bottom: 21px;
+    margin-bottom: 41px;
     order: 1;
-    margin-left: 88px;
     max-width: 500px;
   }
 }
@@ -87,7 +88,13 @@
     text-align: left;
     margin-bottom: 48px;
     order: 2;
-    margin-left: 88px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-top__slogan {
+    margin-bottom: 53px;
   }
 }
 
@@ -104,14 +111,18 @@
     margin-top: -80px;
     margin-bottom: 0;
     align-self: center;
+    width: 709px;
+    height: 609px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .promo-top__img {
     position: absolute;
-    top: 242px;
-    left: 720px;
+    width: 552px;
+    height: 499px;
+    top: 3px;
+    left: 600px;
   }
 }
 
@@ -125,6 +136,5 @@
     order: 3;
     z-index: 1;
     position: relative;
-    margin-left: 88px;
   }
 }

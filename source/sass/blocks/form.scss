@@ -140,20 +140,19 @@
 }
 
 .form__item {
-  min-height: 45px;//
   display: flex;//
   width: 100%;//
   padding: 0 20px;//
   margin-bottom: 14px;//
 
   &--radio {
-    min-height: 30px;//
     margin-bottom: 12px;
 
     .form__label {
       position: relative;//
       padding-left: 46px;//
-      min-height: 30px;//
+      padding-top: 6px;
+      padding-bottom: 6px;
 
       &::before {
         content: "";//
@@ -191,14 +190,14 @@
   }
 
   &--checkbox {
-    min-height: 30px;//
     margin-bottom: 13px;
 
     .form__label {
       position: relative;
       padding-left: 46px;
-      min-height: 30px;
       width: 100%;
+      padding-top: 6px;
+      padding-bottom: 6px;
 
       &::before {
         content: "";
@@ -252,18 +251,17 @@
 
 @media (min-width: $tablet-width) {
   .form__item {
-    min-height: 52px;//
     padding: 0 67px;//
     margin-bottom: 20px;//
 
     &--radio {
-      min-height: 40px;//
       padding-left: 11px;
       margin-bottom: 14px;//
 
       .form__label {
         padding-left: 59px;
-        min-height: 40px;//
+        padding-top: 10px;
+        padding-bottom: 10px;
 
         &::before {
           width: 40px;//
@@ -280,16 +278,15 @@
     }
 
     &--checkbox {
-      min-height: 40px;//
       width: 50%;
       margin-bottom: 32px;
       padding: 0 30px;
-
       .form__label {
         position: relative;
         padding-left: 58px;
-        min-height: 40px;
         width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
         &::before {
           content: "";
@@ -344,16 +341,18 @@
   font-size: 16px;//
   line-height: 18px;//
   text-transform: uppercase;//
-  white-space: nowrap;//
   display: flex;//
-  align-items: center;//
   margin-right: 15px;
+  padding-top: 13px;
+  padding-bottom: 14px;
 }
 
 @media (min-width: $tablet-width) {
   .form__label {
     font-size: 20px;//
     line-height: 20px;//
+    padding-top: 16px;
+    padding-bottom: 6px;
   }
 }
 
@@ -370,6 +369,7 @@
   box-shadow: none;//
   flex-grow: 1;
   min-width: 0;//
+  height: 45px;
 
   &:focus {
     border-color: #000000;
@@ -387,7 +387,7 @@
     margin-right: 20px;
     margin-top: 35px;
     padding: 11px 12px;
-    min-height: 150px;
+    height: 150px;
     margin-bottom: 28px;
     width: calc(100% - 2 * 20px);
   }
@@ -398,6 +398,7 @@
     font-size: 20px;//
     line-height: 50px;//
     padding: 0 20px;//
+    height: 52px;
 
     &--textarea {
       line-height: 30px;//
@@ -405,7 +406,7 @@
       margin-right: 70px;
       margin-top: 76px;
       padding: 9px 20px;
-      min-height: 174px;
+      height: 174px;
       width: calc(100% - 2 * 70px);
       margin-bottom: 65px;
     }
