@@ -4,20 +4,29 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    min-height: 110px;
-    display: flex;
-    align-items: center;
+    margin: 23px 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    min-height: 170px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
+    margin: 52px 0;
+
+    &--index {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+        width: 50%;
+        height: 696px;
+        background-image: url("../img/index-background-mobile@1x.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $accent-color;
+      }
+    }
   }
 }
 
@@ -30,7 +39,6 @@
     padding-left: 30px;
     padding-right: 30px;
     display: flex;
-    flex-grow: 1;
   }
 }
 
@@ -43,6 +51,18 @@
   }
 }
 
-.header__navigation {
-  margin-left: auto;
+// .header__navigation {
+
+// }
+
+@media (min-width: $tablet-width) {
+  .header__navigation {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header__navigation {
+    max-width: 50%;
+  }
 }

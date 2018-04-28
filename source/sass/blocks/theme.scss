@@ -54,7 +54,7 @@
   &--large {
     font-size: 36px;
     line-height: 60px;
-    margin-top: 16px;
+    margin-top: 13px;
     margin-bottom: 25px;
   }
 
@@ -71,7 +71,7 @@
     &--large {
       font-size: 60px;
       line-height: 60px;
-      margin-top: 30px;
+      margin-top: 29px;
       margin-bottom: 55px;
     }
 
@@ -86,11 +86,15 @@
 @media (min-width: $desktop-width) {
   .theme__title {
     &--large {
-      margin-top: 188px;
+      margin-top: 19px;
     }
 
     &--medium {
       padding: 0 40px;
     }
   }
+}
+
+.theme__overflow {
+  overflow-x: hidden;
 }

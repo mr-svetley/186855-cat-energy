@@ -3,12 +3,13 @@
   flex-direction: column;
   align-items: center;
   background-color: $simple-color;
-  padding-bottom: 70px;
+  padding-bottom: 34px;
 }
 
 @media (min-width: $tablet-width) {
   .slider {
     background-image: linear-gradient(to right, $simple-color, $simple-color 50%, $simple-color-dark 50%, $simple-color-dark);
+    padding-bottom: 70px;
   }
 }
 
@@ -21,14 +22,17 @@
 }
 
 .slider__slides {
-  width: 280px;
+  width: 320px;
   position: relative;
-  min-height: 240px;
+  height: 240px;
+  margin-bottom: 33px;
 }
 
 @media (min-width: $tablet-width) {
   .slider__slides {
-    margin-top: -70px;
+    margin-top: -188px;
+    width: 677px;
+    height: 517px;
   }
 }
 
@@ -49,12 +53,22 @@
 
 .slider__controls {
   display: flex;
+  align-items: center;
 }
 
 .slider__btn {
   @include btn-reset;
-  font: 16px/20px $accent-color;
+  font: 16px/20px $accent-font;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__btn {
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
+    padding: 5px 0;
+  }
 }
 
 .slider__range {
@@ -63,6 +77,24 @@
   background-color: #ffffff;
   padding: 4px 6px;
   min-width: 84px;
+  margin: 0 21px;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__range {
+    position: relative;
+    min-width: 428px;
+    height: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 3px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__range {
+    max-width: 428px;
+  }
 }
 
 .slider__range-fill {
@@ -70,4 +102,28 @@
   border-radius: 3px;
   width: 50%;
   background-color: $accent-color;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__range-fill {
+    display: none;
+  }
+}
+
+// .slider__range-flag {
+
+// }
+
+@media (min-width: $tablet-width) {
+  .slider__range-flag {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 13px solid $simple-color;
+    background-color: $accent-color;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: calc(50% - 17px);
+    left: calc(50% - 17px);
+  }
 }
