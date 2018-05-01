@@ -2,15 +2,21 @@
 
 // }
 
-// @media (min-width: $tablet-width) {
-//   .example {
-//   }
-// }
+@media (min-width: $tablet-width) {
+  .example {
+    border-top: 1px solid $simple-color-dark;
+    margin-top: -72px;
+    padding-top: 43px;
+  }
+}
 
 @media (min-width: $desktop-width) {
   .example {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
     background-color: $simple-color;
-    background-image: linear-gradient(to right, $simple-color, $simple-color 50%, $simple-color-dark 50%, $simple-color-dark);
+    background-image: linear-gradient(to right, $simple-color, $simple-color 70%, $simple-color-dark 70%, $simple-color-dark);
   }
 }
 
@@ -18,15 +24,25 @@
 
 // }
 
+@media (min-width: $tablet-width) {
+  .example__title-wrapper {
+    margin-bottom: 64px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .example__title-wrapper {
     background-color: #ffffff;
+    padding-bottom: 75px;
+    margin-bottom: 0;
   }
 }
 
 .example__title {
   background-color: $simple-color;
   padding: 0 20px;
+  margin: 0;
+  padding-top: 17px;
 }
 
 @media (min-width: $tablet-width) {
@@ -66,18 +82,18 @@
 .example__info {
   background-color: $simple-color;
   padding: 0 20px;
+  padding-top: 24px;
+  padding-bottom: 35px;
 }
 
 @media (min-width: $tablet-width) {
   .example__info {
     background-color: transparent;
     padding: 0 30px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .example__info {
-    background-color: transparent;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 10px;
+    padding-bottom: 220px;
   }
 }
 
@@ -85,11 +101,26 @@
   .example__info {
     flex-grow: 1;
     padding: 0;
+    padding-top: 71px;
   }
 }
 
 .example__text {
   margin: 0;
+  margin-bottom: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__text {
+    margin-bottom: 53px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__text {
+    padding-right: 195px;
+    margin-bottom: 70px;
+  }
 }
 
 // .example__stat-wrapper {
@@ -102,9 +133,17 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .example__stat-wrapper {
+    flex-direction: column;
+    padding-right: 220px;
+  }
+}
+
 .example__stat-list {
   @include list-reset;
   display: flex;
+  justify-content: space-between;
 }
 
 // @media (min-width: $tablet-width) {
@@ -114,28 +153,102 @@
 // }
 
 .example__stat-item {
-  border: 1px solid $simple-color-dark;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
+  max-width: 124px;
+  height: 56px;
+  padding: 0 17px;
+  padding-top: 15px;
+  margin-bottom: 34px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__stat-item {
+    max-width: 162px;
+    height: 72px;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 1 0 162px;
+    margin-right: 42px;
+  }
 }
 
 .example__stat-name {
-  width: 70%;
+  text-align: center;
+  background-color: $simple-color;
+  line-height: 12px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__stat-name {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #ffffff;
+    padding: 0 3px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__stat-name {
+    background-color: $simple-color;
+  }
 }
 
 .example__stat-value {
-  width: 70%;
+  text-align: center;
   font: 24px/24px $accent-font;
   text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+@media (min-width: $tablet-width) {
+  .example__stat-value {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 17px;
+  }
 }
 
 .example__total {
   font: 14px/20px $accent-font;
   text-transform: uppercase;
   margin: 0;
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
   .example__total {
     margin-left: auto;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 195px;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 21px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example__total {
+    max-width: 400px;
+    text-align: left;
+    margin-left: 0;
+    margin-top: 14px;
+
+    span {
+      padding-left: 60px;
+    }
+  }
+}
+
+.example__slider {
+  // width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: $desktop-width) {
+  .example__slider {
+    margin-right: -20px;
   }
 }

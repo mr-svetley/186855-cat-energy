@@ -1,14 +1,24 @@
-// .how-work {
+.how-work {
+  margin-bottom: 41px;
+}
 
-// }
+@media (min-width: $desktop-width) {
+  .how-work {
+    margin-bottom: 28px;
+  }
+}
 
 .how-work__title {
   padding: 0 20px;
+  margin-top: -4px;
+  margin-bottom: 29px;
 }
 
 @media (min-width: $tablet-width) {
   .how-work__title {
     padding: 0 30px;
+    margin-top: 0;
+    margin-bottom: 71px;
   }
 }
 
@@ -17,6 +27,7 @@
     padding: 0 40px;
     max-width: 1300px;
     margin: 0 auto;
+    margin-bottom: 73px;
   }
 }
 
@@ -30,6 +41,7 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    counter-reset: how-work;
   }
 }
 
@@ -43,25 +55,22 @@
 
 .how-work__item {
   position: relative;
-  min-height: 60px;
-  padding-left: 80px;
+  display: flex;
+  letter-spacing: -0.008em;
+  margin-bottom: 20px;
 
   &::before {
     content: "";
     display: block;
     width: 60px;
     height: 60px;
-    position: absolute;
-    top: 0;
-    left: 0;
+    flex: 0 0 60px;
+    align-self: flex-start;
+    margin-right: 20px;
     background-repeat: no-repeat;
     background-position: center center;
     background-color: $accent-color;
   }
-
-  // &::after {
-  //   // нумерация через content: counter();
-  // }
 
   &--leave {
     &::before {
@@ -92,6 +101,38 @@
   .how-work__item {
     margin: 0 30px;
     flex: 1 1 40%;
+    font-size: 16px;
+    line-height: 24px;
+    flex-direction: column;
+    margin-bottom: 36px;
+    padding-right: 83px;
+    padding-bottom: 97px;
+
+    &::before {
+      flex-basis: 80px;
+      width: 80px;
+      height: 80px;
+      margin-bottom: 32px;
+    }
+
+    &::after {
+      content: counter(how-work);
+      counter-increment: how-work;
+      font-size: 281px;
+      line-height: 281px;
+      color: $simple-color;
+      font-family: $accent-font;
+      position: absolute;
+      top: -40px;
+      right: 77px;
+      z-index: -1;
+    }
+
+    &:first-child {
+      &::after {
+        right: 95px;
+      }
+    }
   }
 }
 
@@ -99,5 +140,16 @@
   .how-work__item {
     margin: 0 40px;
     flex: 1 1 20%;
+    padding-right: 4px;
+
+    &::after {
+      right: -2px;
+    }
+
+    &:first-child {
+      &::after {
+        right: 17px;
+      }
+    }
   }
 }

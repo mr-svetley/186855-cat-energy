@@ -12,6 +12,13 @@
 @media (min-width: $tablet-width) {
   .navigation__list {
     display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .navigation__list {
+    padding-top: 8px;
   }
 }
 
@@ -36,10 +43,9 @@
   font-size: 20px;
   line-height: 20px;
   border-bottom: 1px solid $simple-color-dark;
-  min-height: 66px;
   font-weight: 500;
   flex-grow: 1;
-  padding: 0 20px;
+  padding: 23px 20px;
 
   &:hover {
     opacity: 0.6;
@@ -54,12 +60,11 @@
   .navigation__link {
     padding: 0;
     margin-left: 35px;
-    min-height: 45px;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 45px;
     font-weight: 400;
     border-bottom-color: transparent;
-    border-bottom-width: 2px;
+    border-bottom-width: 3px;
 
     &--active {
       border-bottom-color: $accent-color;

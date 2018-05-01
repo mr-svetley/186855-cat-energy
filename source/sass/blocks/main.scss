@@ -1,5 +1,5 @@
 .main {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .main__title {
@@ -19,5 +19,6 @@
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 28px;
   }
 }

@@ -1,6 +1,10 @@
 .pattern-card {
   background-color: $simple-color;
   position: relative;
+  padding: 20px;
+  padding-top: 31px;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
 
   &::before {
     content: "";
@@ -10,8 +14,8 @@
     border-radius: 50%;
     background-color: $accent-color;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 26px;
+    left: 23px;
   }
 
   &::after {
@@ -30,6 +34,8 @@
     &::after {
       background-image: url("../img/icon-cat-slim.svg");
       background-size: 35px 49px;
+      top: 13px;
+      left: 13px;
     }
   }
 
@@ -37,6 +43,90 @@
     &::after {
       background-image: url("../img/icon-cat-pro.svg");
       background-size: 67px 28px;
+      top: 15px;
+      left: 12px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pattern-card {
+    padding-top: 77px;
+    padding-left: 52px;
+    padding-right: 283px;
+    padding-bottom: 59px;
+    margin-bottom: 30px;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      right: 62px;
+      left: unset;
+    }
+
+    &::after {
+      width: 268px;
+      height: 194px;
+    }
+
+    &--slim {
+      &::after {
+        background-size: 140px 194px;
+        top: 80px;
+        left: unset;
+        right: 28px;
+      }
+    }
+
+    &--pro {
+      padding-right: 312px;
+
+      &::after {
+        background-size: 268px 112px;
+        top: 93px;
+        left: unset;
+        right: 28px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pattern-card {
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      left: 52px;
+      right: unset;
+    }
+
+    &::after {
+      width: 134px;
+      height: 97px;
+    }
+
+    &--slim {
+      padding-right: 52px;
+
+      &::after {
+        background-size: 70px 97px;
+        top: 41px;
+        left: 34px;
+        right: unset;
+      }
+    }
+
+    &--pro {
+      padding-right: 52px;
+
+      &::after {
+        background-size: 134px 56px;
+        top: 49px;
+        left: 34px;
+        right: unset;
+      }
     }
   }
 }
@@ -44,6 +134,25 @@
 .pattern-card__title {
   font: 24px/37px $accent-font;
   text-transform: uppercase;
+  margin: 0;
+  margin-left: 71px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .pattern-card__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: 0;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pattern-card__title {
+    padding-left: 162px;
+    margin-bottom: 74px;
+  }
 }
 
 .pattern-card__list {
@@ -56,6 +165,24 @@
 
 .pattern-card__description {
   border-bottom: 1px solid $simple-color-dark;
+  margin: 0;
+  padding-bottom: 21px;
+  margin-bottom: 19px;
+}
+
+@media (min-width: $tablet-width) {
+  .pattern-card__description {
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pattern-card__description {
+    margin-bottom: 10px;
+  }
 }
 
 .pattern-card__link {
@@ -74,6 +201,7 @@
     background-size: 24px 11px;
     height: 16px;
     width: 33px;
+    margin-left: 15px;
   }
 
   &:hover {
@@ -84,5 +212,16 @@
 
   &:active {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pattern-card__link {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::after {
+      margin-left: 25px;
+    }
   }
 }
