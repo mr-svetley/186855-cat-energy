@@ -1,56 +1,101 @@
-.footer {
-  background-color: $simple-color;
+// .footer {
+
+// }
+
+@media (min-width: $desktop-width) {
+  .footer {
+    position: relative;
+  }
+}
+
+// .footer__contacts {
+
+// }
+
+@media (min-width: $desktop-width) {
+  .footer__contacts {
+    position: absolute;
+    z-index: 1;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-610px);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .footer__main {
+  background-color: $simple-color;
+}
+
+.footer__main-content {
   padding: 0 20px;
-  padding-top: 37px;
-  padding-bottom: 23px;
 }
 
 @media (min-width: $tablet-width) {
-  .footer__main {
-    padding: 0 30px;
+  .footer__main-content {
+    padding: 58px 30px;
     display: flex;
     justify-content: space-between;
-    height: 150px;
-    padding-bottom: 0;
+    align-items: center;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .footer__main {
-    padding-left: 40px;
-    padding-right: 40px;
-    max-width: 1300px;
-    margin: 0 auto;
+  .footer__main-content {
+    @include center;
   }
 }
 
 .footer__logo-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 31px;
+  display: block;
+  padding-top: 39px;
+  padding-bottom: 31px;
 }
 
 @media (min-width: $tablet-width) {
   .footer__logo-link {
-    margin-bottom: 0;
+    padding: 0;
   }
 }
 
 .footer__logo-img {
-  width: 128px;
-  height: 24px;
+  display: block;
+  margin: 0 auto;
 }
 
-.footer__social-list {
-  margin-bottom: 20px;
+.footer__social {
+  padding-right: 10px;
 }
 
 @media (min-width: $tablet-width) {
-  .footer__social-list {
-    margin-bottom: 0;
+  .footer__social {
+    padding-right: 0;
+    padding-left: 21px;
+  }
+}
+
+.footer__academy-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 21px;
+  padding-bottom: 23px;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__academy-link {
+    padding: 0;
+  }
+}
+
+.footer__academy-img {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .footer__academy-img {
+    margin-left: 23px;
   }
 }

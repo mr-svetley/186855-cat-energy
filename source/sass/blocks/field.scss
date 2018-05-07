@@ -1,0 +1,141 @@
+.field {
+  font: 16px/18px $accent-font;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &--textarea {
+    .field__input {
+      height: 100%;
+      resize: vertical;
+      min-height: 100px;
+      padding-right: 12px;
+    }
+
+    .field__input:focus {
+      height: 100%;
+    }
+  }
+
+  &--error {
+    .field__input,
+    .field__input:hover,
+    .field__input:focus {
+      border-color: red;
+      border-width: 2px;
+      padding: 0 14px;
+      height: 45px;
+      line-height: 41px;
+    }
+
+    .field__icon,
+    .field__input:focus + .field__icon {
+      fill: red;
+    }
+  }
+
+  &--icon {
+    .field__input {
+      padding-right: 45px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field {
+    font-size: 20px;
+    line-height: 20px;
+
+    &--error {
+      .field__input,
+      .field__input:hover,
+      .field__input:focus {
+        border-color: red;
+        border-width: 2px;
+        padding: 0 19px;
+        height: 52px;
+        line-height: 48px;
+      }
+
+      .field__icon,
+      .field__input:focus + .field__icon {
+        fill: red;
+      }
+    }
+  }
+}
+
+.field__label {
+  margin-right: 13px;
+}
+
+@media (min-width: $tablet-width) {
+  .field__label {
+    margin-right: 18px;
+  }
+}
+
+.field__input {
+  font: inherit;
+  text-transform: inherit;
+  padding: 0 15px;
+  height: 45px;
+  line-height: 43px;
+  min-width: 5px;
+  flex-grow: 1;
+  border: 1px solid $simple-color-dark;
+
+  &:hover {
+    border-color: $simple-color-night;
+  }
+
+  &:focus {
+    border-color: #000000;
+    border-width: 2px;
+    padding: 0 14px;
+    height: 45px;
+    line-height: 41px;
+
+    & + .field__icon-wrapper .field__icon {
+      fill: $accent-color;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field__input {
+    height: 52px;
+    line-height: 50px;
+    padding: 0 20px;
+
+    &:focus {
+      padding: 0 19px;
+      height: 52px;
+      line-height: 48px;
+    }
+  }
+}
+
+.field__icon-wrapper {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 0;
+  right: 0;
+  display: flex;
+}
+
+@media (min-width: $tablet-width) {
+  .field__icon-wrapper {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.field__icon {
+  margin: auto;
+  max-width: 20px;
+  max-height: 20px;
+}
