@@ -1,0 +1,20 @@
+.page {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $main-text-color;
+}
+
+.page__link {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    opacity: 0.6;
+    fill: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

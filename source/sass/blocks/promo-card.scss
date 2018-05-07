@@ -1,40 +1,49 @@
 .promo-card {
+  background-color: $accent-color;
   background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center 64px, center center;
   background-size: 55px 60px, cover;
   color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center 65px, center center;
   text-align: center;
-  padding-top: 185px;
-  margin: 0 20px;
-  min-height: 289px;
+  padding-top: 186px;
+  padding-bottom: 43px;
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 35px;
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: $tablet-width) {
   .promo-card {
-    background-position: 91px center, center -347px;
     text-align: left;
-    margin-left: 0;
-    margin-right: 0;
-    min-height: 200px;
-    padding-left: 60%;
     padding-top: 71px;
-    margin-bottom: 76px;
+    padding-left: 423px;
+    padding-bottom: 69px;
+    background-position: 91px 65px, center center;
+
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-tablet@2x.jpg");
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .promo-card {
-    background-position: center 66px, center center;
     width: 245px;
-    min-height: 289px;
-    padding: 0;
-    padding-top: 188px;
+    padding: 10px;
+    padding-top: 186px;
     text-align: center;
-    margin: 0;
-    margin-left: auto;
+    background-position: center 65px, center center;
+
+    background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/icon-gift.svg"), url("../img/gift-photo-desktop@2x.jpg");
+    }
   }
 }

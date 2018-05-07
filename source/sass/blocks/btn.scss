@@ -4,11 +4,11 @@
   background-color: $accent-color;
   text-align: center;
   text-transform: uppercase;
-  font-weight: normal;
   font-family: $accent-font;
   line-height: 40px;
   display: inline-block;
   font-size: 16px;
+  padding: 0 20px;
 
   &:hover {
     background-color: $accent-color-dark;
@@ -37,19 +37,11 @@
     line-height: 52px;
     font-size: 20px;
     padding: 0 27px;
+
+    &--fix-size {
+      line-height: 40px;
+      font-size: 16px;
+      padding: 0 20px;
+    }
   }
 }
-
-// .btn {
-//   @include btn-reset;
-//   color: #ffffff;
-//   background-color: $accent-color;
-//   text-align: center;
-//   text-transform: uppercase;
-//   font-weight: 400;
-//   font-family: $accent-font;
-//   line-height: 20px;
-//   font-size: 20px;
-//   display: inline-block;
-//   padding: 16px 25px;
-// }

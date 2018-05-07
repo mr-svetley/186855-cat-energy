@@ -13,3 +13,11 @@
   text-decoration: none;
   color: inherit;
 }
+
+@mixin center() {
+  padding-left: 40px;
+  padding-right: 40px;
+  max-width: $desktop-width;
+  margin-left: auto;
+  margin-right: auto;
+}

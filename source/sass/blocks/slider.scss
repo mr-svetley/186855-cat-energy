@@ -1,107 +1,160 @@
-.slider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $simple-color;
-  padding-bottom: 34px;
-}
+// .slider {
+
+// }
 
 @media (min-width: $tablet-width) {
   .slider {
-    background-image: linear-gradient(to right, $simple-color, $simple-color 50%, $simple-color-dark 50%, $simple-color-dark);
-    padding-bottom: 70px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .slider {
-    width: 50%;
-    flex-shrink: 0;
-    background-image: linear-gradient(to right, $simple-color, $simple-color 50%, $simple-color-dark 50%, $simple-color-dark);
+    padding-top: 5px;
+    padding-bottom: 71px;
+    background-image: linear-gradient(to right, $simple-color, $simple-color 50%, $simple-color-dark 50%, $simple-color);
   }
 }
 
 .slider__slides {
-  width: 320px;
   position: relative;
+  width: 320px;
   height: 240px;
-  margin-bottom: 33px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 31px;
 }
 
 @media (min-width: $tablet-width) {
   .slider__slides {
-    margin-top: -188px;
-    width: 677px;
+    width: 690px;
     height: 517px;
+    margin-bottom: 17px;
+    margin-top: -174px;
+    left: 7px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__slides {
+    top: -21px;
+    left: -20px;
   }
 }
 
 .slider__slide {
-  display: block;
   position: absolute;
-  top: 0;
-  left: 0;
+  width: auto;
+  height: 240px;
+  bottom: 0;
 
   &--before {
-    clip: rect(auto, 160px, auto, auto);
+    left: 0;
+    clip: rect(auto 320px auto auto);
   }
 
   &--after {
-    clip: rect(auto, auto, auto, 160px);
+    right: 0;
+    clip: rect(auto auto auto 320px);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .slider__slide {
+    height: 517px;
+
+    &--before {
+      left: 0;
+      clip: rect(auto 338px auto auto);
+    }
+
+    &--after {
+      right: 0;
+      clip: rect(auto auto auto 338px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__slide {
+    &--before {
+      left: 0;
+      clip: rect(auto 365px auto auto);
+    }
+
+    &--after {
+      right: 0;
+      clip: rect(auto auto auto 365px);
+    }
   }
 }
 
 .slider__controls {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  justify-content: center;
+}
+
+@media (min-width: $tablet-width) {
+  .slider__controls {
+    align-items: center;
+  }
 }
 
 .slider__btn {
   @include btn-reset;
   font: 16px/20px $accent-font;
   text-transform: uppercase;
+  color: #000000;
 }
 
 @media (min-width: $tablet-width) {
   .slider__btn {
+    border-bottom: 1px dotted $simple-color-night;
+    padding-bottom: 5px;
     font-size: 20px;
-    line-height: 20px;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
-    padding: 5px 0;
+    flex: 0 0 60px;
+    text-align: center;
+    width: 60px;
   }
 }
 
 .slider__range {
-  border: 1px solid $simple-color-dark;
+  height: 14px;
   border-radius: 6px;
-  background-color: #ffffff;
-  padding: 4px 6px;
-  min-width: 84px;
-  margin: 0 21px;
+  border: 1px solid $simple-color-night;
+  position: relative;
+  padding: 3px 5px;
+  max-width: 84px;
+  flex-grow: 1;
+  margin: 0 18px;
+
+  &--before {
+    .slider__range-fill {
+      margin-left: 0;
+    }
+  }
+
+  &--after {
+    .slider__range-fill {
+      margin-right: 0;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
   .slider__range {
-    position: relative;
-    min-width: 428px;
-    height: 6px;
-    background-color: rgba(0, 0, 0, 0.1);
     border: none;
-    border-radius: 3px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .slider__range {
-    max-width: 428px;
+    border-radius: 2.5px;
+    height: 6px;
+    background-color: $simple-color-night;
+    width: 428px;
+    max-width: none;
+    flex-grow: 0;
   }
 }
 
 .slider__range-fill {
   height: 6px;
   border-radius: 3px;
-  width: 50%;
   background-color: $accent-color;
+  width: 50%;
+  margin: 0 auto;
+  transition: margin 1s;
 }
 
 @media (min-width: $tablet-width) {
@@ -110,20 +163,29 @@
   }
 }
 
-// .slider__range-flag {
-
-// }
+.slider__range-flag {
+  display: none;
+}
 
 @media (min-width: $tablet-width) {
   .slider__range-flag {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    border: 13px solid $simple-color;
+    border: 14px solid #ffffff;
     background-color: $accent-color;
-    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.5);
-    position: absolute;
-    top: calc(50% - 17px);
-    left: calc(50% - 17px);
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+
+    &--active {
+      box-shadow: 0 0 0 2px $accent-color, 2px 2px 7px 0 rgba(0, 0, 0, 0.5);
+      border-width: 10px;
+      width: 30px;
+      height: 30px;
+    }
   }
 }
