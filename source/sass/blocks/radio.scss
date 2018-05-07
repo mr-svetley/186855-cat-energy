@@ -4,8 +4,16 @@
   text-transform: uppercase;
   font-family: $accent-font;
   display: block;
+}
 
-  &__control:checked ~ .radio__label {
+.radio__control {
+  &:focus ~ .radio__label {
+    &::before {
+      border-color: $simple-color-night;
+    }
+  }
+
+  &:checked ~ .radio__label {
     &::after {
       transform: scale(1);
     }
@@ -24,7 +32,6 @@
   padding: 7px 0;
   padding-left: 45px;
   display: inline-block;
-
 
   &::before {
     content: "";
