@@ -48,6 +48,14 @@
     transition: transform 1s;
     transform: scale(0) rotate(0deg);
   }
+
+  &:hover::before {
+    border-color: $simple-color-night;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

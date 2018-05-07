@@ -64,29 +64,46 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-color: $accent-color;
+    background-size: 50px 50px;
   }
 
   &--leave {
     &::before {
       background-image: url("../img/advantage-leaf@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/advantage-leaf@2x.png");
+      }
     }
   }
 
   &--water {
     &::before {
       background-image: url("../img/advantage-powder@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/advantage-powder@2x.png");
+      }
     }
   }
 
   &--fork {
     &::before {
       background-image: url("../img/advantage-dining@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/advantage-dining@2x.png");
+      }
     }
   }
 
   &--clock {
     &::before {
       background-image: url("../img/advantage-clock@1x.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/advantage-clock@2x.png");
+      }
     }
   }
 
