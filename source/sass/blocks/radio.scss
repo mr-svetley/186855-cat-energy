@@ -8,6 +8,8 @@
 
 .radio__control {
   &:focus ~ .radio__label {
+    outline: 1px dotted #000000;
+
     &::before {
       border-color: $simple-color-night;
     }

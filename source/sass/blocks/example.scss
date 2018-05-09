@@ -43,7 +43,7 @@
 
 @media (min-width: $desktop-width) {
   .example__wrapper {
-    background-image: linear-gradient(to right, $simple-color, $simple-color 70%, $simple-color-dark 70%, $simple-color);
+    background-image: linear-gradient(to right, $simple-color, $simple-color 70%, $simple-color-dark 70%, $simple-color-dark);
   }
 }
 
