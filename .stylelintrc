@@ -9,6 +9,7 @@
   "ignoreFiles": [
     "source/sass/normalize.scss",
     "source/js/svgxuse.js",
-    "source/js/picturefill.js"
+    "source/js/picturefill.js",
+    "build/**"
   ]
 }

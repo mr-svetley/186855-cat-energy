@@ -14,6 +14,9 @@
     &--light {
       .navigation__link {
         color: #ffffff;
+      }
+
+      .navigation__link--active {
         border-bottom-color: #ffffff;
       }
     }
@@ -67,6 +70,10 @@
       transform: rotate(-45deg);
     }
   }
+
+  &--hidden {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -77,6 +84,16 @@
 
 .navigation__list {
   @include list-reset;
+}
+
+@media (max-width: $tablet-width - 1px) {
+  .navigation__list {
+    overflow: hidden;
+
+    &--hidden {
+      height: 0;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {

@@ -4,10 +4,30 @@
   text-transform: uppercase;
   font-family: $accent-font;
   display: block;
+}
 
-  &__control:checked ~ .radio__label {
+.radio__control {
+  &:focus ~ .radio__label {
+    outline: 1px dotted #000000;
+
+    &::before {
+      border-color: $simple-color-night;
+    }
+  }
+
+  &:checked ~ .radio__label {
     &::after {
       transform: scale(1);
+    }
+  }
+
+  &:disabled ~ .radio__label {
+    opacity: 0.3;
+  }
+
+  &:disabled ~ .radio__label:hover {
+    &::before {
+      border-color: $simple-color-dark;
     }
   }
 }
@@ -24,7 +44,6 @@
   padding: 7px 0;
   padding-left: 45px;
   display: inline-block;
-
 
   &::before {
     content: "";

@@ -10,7 +10,8 @@
   font-size: 16px;
   padding: 0 20px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $accent-color-dark;
   }
 
@@ -22,7 +23,8 @@
     background-color: $simple-color;
     color: $main-text-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $simple-color-dark;
     }
 

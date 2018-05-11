@@ -4,10 +4,30 @@
   text-transform: uppercase;
   font-family: $accent-font;
   display: block;
+}
 
-  &__control:checked ~ .checkbox__label {
+.checkbox__control {
+  &:focus ~ .checkbox__label {
+    outline: 1px dotted #000000;
+
+    &::before {
+      border-color: $simple-color-night;
+    }
+  }
+
+  &:checked ~ .checkbox__label {
     &::after {
       transform: scale(1) rotate(-45deg);
+    }
+  }
+
+  &:disabled ~ .checkbox__label {
+    opacity: 0.3;
+  }
+
+  &:disabled ~ .checkbox__label:hover {
+    &::before {
+      border-color: $simple-color-dark;
     }
   }
 }
