@@ -20,6 +20,16 @@
       transform: scale(1);
     }
   }
+
+  &:disabled ~ .radio__label {
+    opacity: 0.3;
+  }
+
+  &:disabled ~ .radio__label:hover {
+    &::before {
+      border-color: $simple-color-dark;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {

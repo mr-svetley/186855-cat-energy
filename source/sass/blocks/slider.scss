@@ -110,6 +110,14 @@
     flex: 0 0 60px;
     text-align: center;
     width: 60px;
+
+    &:hover {
+      border-bottom: 1px solid $main-text-color;
+    }
+
+    &:active {
+      border-bottom-color: transparent;
+    }
   }
 }
 
@@ -181,10 +189,14 @@
     background-color: $accent-color;
     box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
 
+    &:hover {
+      box-shadow: 2px 2px 7px 0 rgba(0, 0, 0, 0.5);
+    }
+
     &--active,
     &:focus {
       box-shadow: 0 0 0 2px $accent-color, 2px 2px 7px 0 rgba(0, 0, 0, 0.5);
-      border-width: 10px;
+      border-width: 11px;
       width: 30px;
       height: 30px;
     }
