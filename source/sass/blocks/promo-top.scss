@@ -20,13 +20,25 @@
 
 @media (min-width: $desktop-width) {
   .promo-top {
-    background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(#65a93c, #65a93c);
-    background-size: 50% auto;
-    background-repeat: no-repeat;
-    background-position: right top;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      top: 0;
+      right: 0;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-color: $accent-color;
+      background-size: cover;
+      z-index: -999;
+    }
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(#65a93c, #65a93c);
+      &::after {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 }
