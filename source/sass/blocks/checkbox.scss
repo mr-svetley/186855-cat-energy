@@ -7,7 +7,7 @@
 }
 
 .checkbox__control {
-  &:focus ~ .checkbox__label {
+  &:focus ~ .checkbox__custom {
     outline: 1px dotted #000000;
 
     &::before {
@@ -15,17 +15,17 @@
     }
   }
 
-  &:checked ~ .checkbox__label {
+  &:checked ~ .checkbox__custom {
     &::after {
       transform: scale(1) rotate(-45deg);
     }
   }
 
-  &:disabled ~ .checkbox__label {
+  &:disabled ~ .checkbox__custom {
     opacity: 0.3;
   }
 
-  &:disabled ~ .checkbox__label:hover {
+  &:disabled ~ .checkbox__custom:hover {
     &::before {
       border-color: $simple-color-dark;
     }
@@ -39,7 +39,7 @@
   }
 }
 
-.checkbox__label {
+.checkbox__custom {
   position: relative;
   padding: 7px 0;
   padding-left: 45px;
@@ -79,7 +79,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .checkbox__label {
+  .checkbox__custom {
     padding: 10px 0;
     padding-left: 60px;
 

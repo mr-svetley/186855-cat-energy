@@ -5,36 +5,6 @@
   align-items: center;
   position: relative;
 
-  &--textarea {
-    .field__input {
-      height: 100%;
-      resize: vertical;
-      min-height: 100px;
-      padding-right: 12px;
-    }
-
-    .field__input:focus {
-      height: 100%;
-    }
-  }
-
-  &--error {
-    .field__input,
-    .field__input:hover,
-    .field__input:focus {
-      border-color: red;
-      border-width: 2px;
-      padding: 0 14px;
-      height: 45px;
-      line-height: 41px;
-    }
-
-    .field__icon,
-    .field__input:focus + .field__icon {
-      fill: red;
-    }
-  }
-
   &--icon {
     .field__input {
       padding-right: 45px;
@@ -46,33 +16,15 @@
   .field {
     font-size: 20px;
     line-height: 20px;
-
-    &--error {
-      .field__input,
-      .field__input:hover,
-      .field__input:focus,
-      .field__input:invalid {
-        border-color: red;
-        border-width: 2px;
-        padding: 0 19px;
-        height: 52px;
-        line-height: 48px;
-      }
-
-      .field__icon,
-      .field__input:focus + .field__icon {
-        fill: red;
-      }
-    }
   }
 }
 
-.field__label {
+.field__label-text {
   margin-right: 13px;
 }
 
 @media (min-width: $tablet-width) {
-  .field__label {
+  .field__label-text {
     margin-right: 18px;
   }
 }
@@ -88,6 +40,7 @@
   border: 1px solid $simple-color-dark;
   outline: none;
   box-shadow: none;
+  align-self: flex-start;
 
   &:hover {
     border-color: $simple-color-night;
@@ -104,6 +57,19 @@
       fill: $accent-color;
     }
   }
+
+  &:invalid {
+    border-color: red;
+    border-width: 2px;
+    padding: 0 14px;
+    height: 45px;
+    line-height: 41px;
+  }
+
+  &:invalid ~ .field__icon-wrapper .field__icon,
+  &:invalid:focus ~ .field__icon-wrapper .field__icon {
+    fill: red;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -116,6 +82,19 @@
       padding: 0 19px;
       height: 52px;
       line-height: 48px;
+    }
+
+    &:invalid {
+      border-color: red;
+      border-width: 2px;
+      padding: 0 19px;
+      height: 52px;
+      line-height: 48px;
+    }
+
+    &:invalid ~ .field__icon-wrapper .field__icon,
+    &:invalid:focus ~ .field__icon-wrapper .field__icon {
+      fill: red;
     }
   }
 }

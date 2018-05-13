@@ -79,6 +79,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 25px;
+  word-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
@@ -108,6 +109,7 @@
     margin-left: 0;
     text-align: left;
     margin-bottom: 48px;
+    max-width: 487px;
   }
 }
 
@@ -138,7 +140,6 @@
 @media (min-width: $desktop-width) {
   .promo-top__img {
     width: 552px;
-    z-index: 0;
     bottom: 55px;
     right: 258px;
   }
@@ -153,5 +154,6 @@
   .promo-top__btn {
     display: inline-block;
     font-size: 20px;
+    max-width: 487px;
   }
 }

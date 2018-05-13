@@ -29,7 +29,7 @@
               <a href="catalog.html" class="navigation__link page__link">Каталог продукции</a>
             </li>
             <li class="navigation__item">
-              <a href="form.html" class="navigation__link navigation__link--active page__link">Подбор программы</a>
+              <a class="navigation__link navigation__link--active page__link">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -49,30 +49,30 @@
           <div class="program-form__content">
             <div class="program-form__group program-form__group--base">
               <label class="field program-form__field">
-                <span class="field__label">Имя:*</span>
+                <span class="field__label-text">Имя:*</span>
                 <input type="text" class="field__input" name="name" placeholder="Барсик" required>
               </label>
               <label class="field program-form__field">
-                <span class="field__label">Вес (кг):*</span>
+                <span class="field__label-text">Вес (кг):*</span>
                 <input type="text" class="field__input" name="weight" placeholder="7" required>
               </label>
               <label class="field program-form__field">
-                <span class="field__label">Возраст&nbsp;(лет):</span>
+                <span class="field__label-text">Возраст&nbsp;(лет):</span>
                 <input type="text" class="field__input" name="age" placeholder="7">
               </label>
             </div>
             <div class="program-form__group program-form__group--radio">
               <label class="radio program-form__radio">
                 <input type="radio" class="radio__control visually-hidden" name="type" value="slim">
-                <span class="radio__label">Похудение</span>
+                <span class="radio__custom">Похудение</span>
               </label>
               <label class="radio program-form__radio">
                 <input type="radio" class="radio__control visually-hidden" name="type" value="pro">
-                <span class="radio__label">Набор массы</span>
+                <span class="radio__custom">Набор массы</span>
               </label>
               <label class="radio program-form__radio">
-                <input type="radio" class="radio__control visually-hidden" name="type" value="advice">
-                <span class="radio__label">Не знаю (нужен ваш совет)</span>
+                <input type="radio" class="radio__control visually-hidden" name="type" value="advice" checked>
+                <span class="radio__custom">Не знаю (нужен ваш совет)</span>
               </label>
             </div>
           </div>
@@ -86,7 +86,7 @@
           <div class="program-form__content">
             <div class="program-form__group program-form__group--contacts-first">
               <label class="field field--icon program-form__field">
-                <span class="field__label">E-mail:*</span>
+                <span class="field__label-text">E-mail:*</span>
                 <input type="email" class="field__input" name="email" placeholder="kuklachev@gmail.com" required>
                 <span class="field__icon-wrapper">
                   <svg class="field__icon" aria-hidden="true" role="presentation" width="17" height="13">
@@ -97,7 +97,7 @@
             </div>
             <div class="program-form__group program-form__group--contacts-last">
               <label class="field field--icon program-form__field">
-                <span class="field__label">Телефон:*</span>
+                <span class="field__label-text">Телефон:*</span>
                 <input type="tel" class="field__input" name="tel" placeholder="8 (960) 900-60-90" required>
                 <span class="field__icon-wrapper">
                   <svg class="field__icon" aria-hidden="true" role="presentation" width="20" height="20">
@@ -116,9 +116,7 @@
           </div>
           <div class="program-form__content">
             <div class="program-form__group program-form__group--textarea">
-              <label class="field field--textarea program-form__textarea">
-                <textarea class="field__input" name="comment" cols="30" rows="3" placeholder="Расскажите обо всех повадках кота" required></textarea>
-              </label>
+              <textarea class="textarea program-form__textarea" name="comment" cols="30" rows="3" placeholder="Расскажите обо всех повадках кота" required></textarea>
             </div>
           </div>
         </section>
@@ -132,19 +130,19 @@
             <div class="program-form__group program-form__group--checkbox">
               <label class="checkbox program-form__col program-form__col--checkbox program-form__checkbox">
                 <input type="checkbox" class="checkbox__control visually-hidden" name="more[]" value="sugar">
-                <span class="checkbox__label">Сахарозаменитель</span>
+                <span class="checkbox__custom">Сахарозаменитель</span>
               </label>
               <label class="checkbox program-form__col program-form__col--checkbox program-form__checkbox">
                 <input type="checkbox" class="checkbox__control visually-hidden" name="more[]" value="water">
-                <span class="checkbox__label">Питьевая вода</span>
+                <span class="checkbox__custom">Питьевая вода</span>
               </label>
               <label class="checkbox program-form__col program-form__col--checkbox program-form__checkbox">
                 <input type="checkbox" class="checkbox__control visually-hidden" name="more[]" value="milk">
-                <span class="checkbox__label">Молоко</span>
+                <span class="checkbox__custom">Молоко</span>
               </label>
               <label class="checkbox program-form__col program-form__col--checkbox program-form__checkbox">
                 <input type="checkbox" class="checkbox__control visually-hidden" name="more[]" value="vita">
-                <span class="checkbox__label">Витамины</span>
+                <span class="checkbox__custom">Витамины</span>
               </label>
             </div>
           </div>

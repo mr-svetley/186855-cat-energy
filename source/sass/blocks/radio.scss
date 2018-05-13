@@ -7,7 +7,7 @@
 }
 
 .radio__control {
-  &:focus ~ .radio__label {
+  &:focus ~ .radio__custom {
     outline: 1px dotted #000000;
 
     &::before {
@@ -15,17 +15,17 @@
     }
   }
 
-  &:checked ~ .radio__label {
+  &:checked ~ .radio__custom {
     &::after {
       transform: scale(1);
     }
   }
 
-  &:disabled ~ .radio__label {
+  &:disabled ~ .radio__custom {
     opacity: 0.3;
   }
 
-  &:disabled ~ .radio__label:hover {
+  &:disabled ~ .radio__custom:hover {
     &::before {
       border-color: $simple-color-dark;
     }
@@ -39,7 +39,7 @@
   }
 }
 
-.radio__label {
+.radio__custom {
   position: relative;
   padding: 7px 0;
   padding-left: 45px;
@@ -79,7 +79,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .radio__label {
+  .radio__custom {
     padding: 10px 0;
     padding-left: 60px;
 

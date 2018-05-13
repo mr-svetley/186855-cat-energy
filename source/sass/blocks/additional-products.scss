@@ -127,6 +127,7 @@
 .additional-products__value {
   width: 50%;
   margin-bottom: 12px;
+  word-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
@@ -153,6 +154,7 @@
   width: 50%;
   margin-bottom: 12px;
   text-align: right;
+  word-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {

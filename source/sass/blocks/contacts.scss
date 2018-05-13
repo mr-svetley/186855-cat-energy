@@ -34,6 +34,7 @@
   text-transform: uppercase;
   color: #000000;
   max-width: 140px;
+  word-wrap: break-word;
 }
 
 @media (min-width: $tablet-width) {
@@ -49,6 +50,7 @@
   line-height: 20px;
   font-size: 14px;
   max-width: 140px;
+  word-wrap: break-word;
 
   br {
     display: none;
@@ -62,7 +64,7 @@
     max-width: 162px;
 
     br {
-      display: initial;
+      display: inline;
     }
   }
 }

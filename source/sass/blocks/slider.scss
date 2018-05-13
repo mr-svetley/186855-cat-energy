@@ -85,13 +85,15 @@
 
 .slider__controls {
   display: flex;
-  align-items: baseline;
-  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  padding-left: 20%;
 }
 
 @media (min-width: $tablet-width) {
   .slider__controls {
-    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
   }
 }
 
@@ -100,6 +102,8 @@
   font: 16px/20px $accent-font;
   text-transform: uppercase;
   color: #000000;
+  word-wrap: break-word;
+  max-width: 120px;
 }
 
 @media (min-width: $tablet-width) {
@@ -118,6 +122,12 @@
     &:active {
       border-bottom-color: transparent;
     }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__btn {
+    max-width: 80px;
   }
 }
 
