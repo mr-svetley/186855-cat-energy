@@ -13,6 +13,14 @@ img {
   height: auto;
 }
 
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="file"] {
+  cursor: pointer;
+}
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
